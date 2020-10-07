@@ -2,6 +2,7 @@
 // eslint eslint-config-airbnb-base eslint-plugin-import @typescript-eslint/parser @typescript-eslint/eslint-plugin prettier eslint-config-prettier eslint-plugin-prettier
 
 module.exports = {
+  root: true,
   extends: [
     "eslint-config-airbnb-base",
     "plugin:@typescript-eslint/recommended",
@@ -33,5 +34,6 @@ module.exports = {
       { devDependencies: ["**/*.test.{ts,tsx}", "**/tests/*"] },
     ],
     "import/prefer-default-export": "off",
+    "no-use-before-define": "off",
   },
 };
