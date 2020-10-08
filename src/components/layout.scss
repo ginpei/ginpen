@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+}
+
+.layout-Header {
+  background-color: var(--color-theme-bg);
+  color: var(--color-theme-fg);
+  line-height: 1.4em;
+  position: relative;
+  z-index: 1; // to lay over .layout-TopLine
+
+  a {
+    color: inherit;
+  }
+
+  h1.layout-Header-siteTitle {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 0;
+  }
+}
+
+.layout-TopLine {
+  background-color: var(--color-theme-bg);
+  height: 5px;
+  left: 0;
+  margin-top: -5px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.layout-Footer {
+  border-top: dashed 1px var(--color-border-moderate);
+  margin-top: 3rem;
+  padding-bottom: 5rem;
+  padding-top: 1rem;
+}
