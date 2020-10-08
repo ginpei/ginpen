@@ -1,0 +1,17 @@
+.root {
+  background-color: var(--color-theme-bg);
+  color: var(--color-theme-fg);
+  line-height: 1.4em;
+  position: relative;
+  z-index: 1; // to lay over .layout-TopLine
+
+  a {
+    color: inherit;
+  }
+}
+
+h1.siteTitle {
+  font-size: 1em;
+  font-weight: normal;
+  margin: 0;
+}
