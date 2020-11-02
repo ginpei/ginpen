@@ -24,8 +24,8 @@ const Layout: React.FC = ({ children }) => {
 
   return (
     <>
-      <Header />
       <TopLine />
+      <Header />
       <div className="ui-container">
         <main>{children}</main>
         <footer
