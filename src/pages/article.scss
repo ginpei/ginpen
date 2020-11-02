@@ -1,3 +1,5 @@
+@use "../vars";
+
 .article-title {
   border-color: transparent;
   border-image: url("/fukidashi-border.gif") 10;
@@ -8,6 +10,11 @@
   margin: 0 80px 1rem;
   min-height: 100px;
   padding: 0.3em;
+
+  @media screen and (max-width: vars.$layout-smaller-width) {
+    margin-left: calc(60px - 1rem);
+    margin-right: -1rem;
+  }
 
   &::before {
     background-image: url("/fukidashi-char.gif");
@@ -49,6 +56,13 @@
   padding: 1rem;
   margin-bottom: 80px;
   font-family: Yu Mincho, serif;
+
+  @media screen and (max-width: vars.$layout-smaller-width) {
+    border-left-width: 0;
+    border-right-width: 0;
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
 
   &::after {
     content: "";
