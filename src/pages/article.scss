@@ -8,12 +8,15 @@
   box-sizing: border-box;
   font-size: 2rem;
   margin: 0 80px 1rem;
+  max-width: 640px;
   min-height: 100px;
   padding: 0.3em;
+  width: calc(100vw - 2rem - 90px);
 
   @media screen and (max-width: vars.$layout-smaller-width) {
     margin-left: calc(60px - 1rem);
     margin-right: -1rem;
+    width: auto;
   }
 
   &::before {
