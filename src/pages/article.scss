@@ -1,21 +1,23 @@
 @use "../vars";
 
 .article-title {
+  --article-title-borderWidth: 10px;
+
   border-color: transparent;
   border-image: url("/fukidashi-border.gif") 10;
   border-style: solid;
-  border-width: 10px;
+  border-width: var(--article-title-borderWidth);
   box-sizing: border-box;
-  font-size: 2rem;
-  margin: 0 80px 1rem;
+  font-size: vars.$font-titleSize;
+  margin: 0 80px vars.$space-base;
   max-width: 640px;
   min-height: 100px;
-  padding: 0.3em;
+  padding: vars.$space-xxSmall;
   width: calc(100vw - 2rem - 90px);
 
   @media screen and (max-width: vars.$layout-smaller-width) {
-    margin-left: calc(60px - 1rem);
-    margin-right: -1rem;
+    margin-left: calc(60px - #{vars.$space-base});
+    margin-right: -#{vars.$space-base};
     width: auto;
   }
 
@@ -25,8 +27,8 @@
     display: block;
     float: left;
     height: 78px;
-    left: -71px;
-    margin-right: -71px;
+    left: calc(-60px - var(--article-title-borderWidth) + 2px + #{vars.$space-xxSmall});
+    margin-right: calc(-60px - var(--article-title-borderWidth) + 2px + #{vars.$space-xxSmall});
     position: relative;
     width: 60px;
   }
@@ -58,7 +60,7 @@
   border-image: url("/fukidashi-border.gif") 10;
   padding: 1rem;
   margin-bottom: 80px;
-  font-family: Yu Mincho, serif;
+  font-family: vars.$font-articleFamily;
 
   @media screen and (max-width: vars.$layout-smaller-width) {
     border-left-width: 0;
@@ -80,18 +82,18 @@
 
   h2 {
     border: solid 1px #ccc;
-    border-radius: 0.2rem;
-    box-shadow: 0 0 0.5rem #0001;
+    border-radius: vars.$border-baseRadius;
+    box-shadow: 0 0 vars.$space-small #0001;
     clear: both;
-    font-size: 2rem;
-    padding: 0.2em;
+    font-size: vars.$font-titleSize;
+    padding: vars.$space-xxSmall;
     margin: 1.5em 0 1em;
   }
 
   h3 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    line-height: 1em;
-    font-size: 1.5rem;
+    font-family: vars.$font-strongFamily;
+    line-height: vars.$font-headingSize;
+    font-size: vars.$font-headingSize;
 
     &::before {
       background-image: url("/guruguru.png");

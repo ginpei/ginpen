@@ -1,18 +1,21 @@
+@use "../vars";
+
 :root {
-  --color-theme-bg: #036;
-  --color-theme-fg: #fff;
-  --color-border-moderate: #ccc;
+  --color-theme-bg: #{vars.$theme-bgColor};
+  --color-theme-fg: #{vars.$theme-fgColor};
+  --color-border-moderate: #{vars.$border-moderateColor};
 }
 
 body {
-  font-family: 'Segoe UI',SegoeUI,'Yu Gothic UI','Meiryo UI',sans-serif;
-  min-width: 320px;
+  font-family: vars.$font-mainFamily;
+  font-size: vars.$font-mainSize;
+  min-width: vars.$layout-min-width;
 }
 
 .ui-container {
   margin-left: auto;
   margin-right: auto;
-  max-width: 800px;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  max-width: vars.$layout-max-width;
+  padding-left: vars.$space-base;
+  padding-right: vars.$space-base;
 }

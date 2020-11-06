@@ -1,3 +1,34 @@
-$layout-iphone8-width: 414px;
+@use './values';
 
-$layout-smaller-width: $layout-iphone8-width;
+// layout
+$layout-smaller-width: values.$width-iphone8;
+$layout-min-width: values.$width-min;
+$layout-max-width: values.$width-pc-max;
+
+// font
+$font-mainSize: values.$size-5;
+$font-mainFamily: values.$font-sansSerif;
+
+$font-articleFamily: values.$font-serif;
+$font-titleSize: values.$size-8;
+$font-headingSize: values.$size-7;
+
+$font-strongFamily: values.$font-sansSerif;
+
+// theme
+$theme-bgColor: values.$blue-9;
+$theme-fgColor: values.$grey-1;
+
+// basic UIs
+$border-moderateColor: values.$grey-3;
+$border-baseRadius: values.$size-1;
+
+$space-xxSmall: values.$size-1;
+$space-small: values.$size-3;
+$space-base: values.$size-5;
+
+// relative size
+$rel-xxSmall: values.$size-rel-1;
+$rel-xSmall: values.$size-rel-2;
+$rel-small: values.$size-rel-3;
+$rel-base: values.$size-rel-5;

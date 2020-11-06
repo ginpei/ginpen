@@ -1,0 +1,39 @@
+// colors
+$blue-9: #036;
+
+$grey-1: #fff;
+$grey-2: #f9f9f9;
+$grey-3: #ccc;
+$grey-8: #333;
+$grey-9: #000;
+
+// size
+$_size-0: 16px;
+$size-1: $_size-0 / 5;
+$size-2: $_size-0 / 3;
+$size-3: $_size-0 / 2;
+$size-4: $_size-0 / 1.5;
+$size-5: $_size-0;
+$size-6: $_size-0 * 1.2;
+$size-7: $_size-0 * 1.5;
+$size-8: $_size-0 * 2;
+
+// relative size
+$_size-rel-0: 1em;
+$size-rel-1: $_size-rel-0 / 5;
+$size-rel-2: $_size-rel-0 / 3;
+$size-rel-3: $_size-rel-0 / 2;
+$size-rel-4: $_size-rel-0 / 1.5;
+$size-rel-5: $_size-rel-0;
+$size-rel-6: $_size-rel-0 * 1.2;
+$size-rel-7: $_size-rel-0 * 1.5;
+$size-rel-8: $_size-rel-0 * 2;
+
+// layout width
+$width-iphone8: 414px;
+$width-min: 300px;
+$width-pc-max: 800px;
+
+// font family
+$font-sansSerif: 'Segoe UI', SegoeUI, 'Meiryo UI', sans-serif;
+$font-serif: Yu Mincho, serif;
