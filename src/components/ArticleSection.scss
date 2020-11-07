@@ -1,0 +1,111 @@
+@use "../vars";
+
+.ArticleSection-title {
+  --article-title-borderWidth: 10px;
+
+  border-color: transparent;
+  border-image: url("/fukidashi-border.gif") 10;
+  border-style: solid;
+  border-width: var(--article-title-borderWidth);
+  box-sizing: border-box;
+  font-size: vars.$font-titleSize;
+  margin: 0 80px vars.$space-base;
+  max-width: 640px;
+  min-height: 100px;
+  padding: vars.$space-xxSmall;
+  width: calc(100vw - 2rem - 90px);
+
+  @media screen and (max-width: vars.$layout-smaller-width) {
+    margin-left: calc(60px - #{vars.$space-base});
+    margin-right: -#{vars.$space-base};
+    width: auto;
+  }
+
+  &::before {
+    background-image: url("/fukidashi-char.gif");
+    content: "";
+    display: block;
+    float: left;
+    height: 78px;
+    left: calc(-60px - var(--article-title-borderWidth) + 2px + #{vars.$space-xxSmall});
+    margin-right: calc(-60px - var(--article-title-borderWidth) + 2px + #{vars.$space-xxSmall});
+    position: relative;
+    width: 60px;
+  }
+}
+
+.ArticleSection-meta {
+  background-color: #f9f9f9;
+  border-radius: 0.2rem;
+  border: solid 1px #0001;
+  color: #666;
+  font-size: 12px;
+  margin: 0 10px 1rem;
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+}
+
+.ArticleSection-metaItem {
+  & + & {
+    &::before {
+      color: #0001;
+      content: "|";
+      margin: 0 0.5em;
+    }
+  }
+}
+
+.ArticleSection-main {
+  border: solid 10px transparent;
+  border-image: url("/fukidashi-border.gif") 10;
+  padding: 1rem;
+  margin-bottom: 80px;
+  font-family: vars.$font-articleFamily;
+
+  @media screen and (max-width: vars.$layout-smaller-width) {
+    border-left-width: 0;
+    border-right-width: 0;
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+
+  &::after {
+    content: "";
+    background-image: url("/fukidashi-char-bottom.gif");
+    height: 78px;
+    width: 60px;
+    float: left;
+    display: block;
+    position: relative;
+    top: 6px;
+  }
+
+  h2 {
+    border: solid 1px #ccc;
+    border-radius: vars.$border-baseRadius;
+    box-shadow: 0 0 vars.$space-small #0001;
+    clear: both;
+    font-size: vars.$font-titleSize;
+    padding: vars.$space-xxSmall;
+    margin: 1.5em 0 1em;
+  }
+
+  h3 {
+    font-family: vars.$font-strongFamily;
+    line-height: vars.$font-headingSize;
+    font-size: vars.$font-headingSize;
+
+    &::before {
+      background-image: url("/guruguru.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: "";
+      display: inline-block;
+      height: 1.2em;
+      margin-right: 0.2em;
+      vertical-align: text-bottom;
+      width: 1.2em;
+    }
+  }
+}
