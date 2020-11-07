@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import "./article.scss";
 
-const SecondPage: React.FC = () => (
+const ArticlePage: React.FC = () => (
   <Layout>
     <SEO title="Article" />
     <h1 className="article-title">これは記事ページだよ。</h1>
@@ -78,4 +78,4 @@ const SecondPage: React.FC = () => (
   </Layout>
 );
 
-export default SecondPage;
+export default ArticlePage;
