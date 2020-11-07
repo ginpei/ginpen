@@ -35,7 +35,7 @@ export const ArticleSection: React.FC<{ article: Article }> = ({ article }) => (
   </article>
 );
 
-function digit2(n) {
+function digit2(n: number) {
   return `0${n}`.slice(-2);
 }
 
