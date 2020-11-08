@@ -14,14 +14,14 @@ export const ArticleSection: React.FC<{ article: Article }> = ({ article }) => (
       <span className="ArticleSection-metaItem">
         カテゴリー：
         {article.categories.flatMap((category, index) => [
-          index === 0 ? "" : <>, </>,
+          index === 0 ? "" : ", ",
           <CategoryLink category={category} key={category.slug} />,
         ])}
       </span>
       <span className="ArticleSection-metaItem">
         タグ：
         {article.tags.flatMap((tag, index) => [
-          index === 0 ? "" : <>, </>,
+          index === 0 ? "" : ", ",
           <TagLink tag={tag} key={tag.slug} />,
         ])}
       </span>
